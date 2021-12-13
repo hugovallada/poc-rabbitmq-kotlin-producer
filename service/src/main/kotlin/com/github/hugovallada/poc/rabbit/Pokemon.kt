@@ -1,4 +1,4 @@
-package com.github.hugovallada.multimoduleproject
+package com.github.hugovallada.poc.rabbit
 
 
 import org.springframework.boot.autoconfigure.SpringBootApplication

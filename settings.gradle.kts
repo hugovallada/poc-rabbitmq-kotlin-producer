@@ -1,4 +1,4 @@
-rootProject.name = "multi-module-project"
+rootProject.name = "poc-rabbit-kotlin"
 include("service")
 include("domain")
 include("client")
