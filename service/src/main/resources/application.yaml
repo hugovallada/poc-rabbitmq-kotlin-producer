@@ -1,1 +1,9 @@
+spring:
+  application:
+    name: poc-rabbit-kotlin-handson
+
+poc:
+  broker:
+    exchange:
+      pokemonEventExchange: pokemon.event
 

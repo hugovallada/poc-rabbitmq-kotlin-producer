@@ -11,5 +11,6 @@ dependencies {
     implementation(project(":client"))
     implementation(project(":domain"))
     implementation(project(":shared"))
+    implementation("org.springframework.boot:spring-boot-starter-amqp")
     implementation(kotlin("stdlib"))
 }
