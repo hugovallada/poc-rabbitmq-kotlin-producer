@@ -22,7 +22,9 @@ class PokemonController(
         val pokemonDomain = createPokemonUseCase.execute(NewPokemonRequestToDomainTranslator.translate(newPokemonRequest)).run {
             createPokemonUseCase.execute(this)
         }
-        return ResponseEntity.status(201).body(PokemonDomainToPokemonResponse.translate(pokemonDomain))
+        return ResponseEntity.status(201).body(PokemonDomainToPokemonResponse.translate(pokemonDomain)).also {
+            log.info("New pokemon ${newPokemonRequest.name} has been created")
+        }
     }
 
     override fun updatePokemon(id: UUID): ResponseEntity<*> {
