@@ -1,6 +1,7 @@
 package com.github.hugovallada.poc.rabbit.api
 
 import com.github.hugovallada.poc.rabbit.model.NewPokemonRequest
+import com.github.hugovallada.poc.rabbit.model.PokemonResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -12,13 +13,13 @@ interface PokemonApi {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun createPokemon(@Valid @RequestBody newPokemonRequest: NewPokemonRequest) : ResponseEntity<Void>
+    fun createPokemon(@Valid @RequestBody newPokemonRequest: NewPokemonRequest): ResponseEntity<PokemonResponse>
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    fun updatePokemon(@PathVariable("id") id: UUID) : ResponseEntity<*>
+    fun updatePokemon(@PathVariable("id") id: UUID): ResponseEntity<*>
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    fun deletePokemon(@PathVariable("id") id: UUID) : ResponseEntity<*>
+    fun deletePokemon(@PathVariable("id") id: UUID): ResponseEntity<*>
 }

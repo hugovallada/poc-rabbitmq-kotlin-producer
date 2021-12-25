@@ -10,5 +10,6 @@ plugins {
 dependencies {
     implementation(project(":client"))
     implementation(project(":domain"))
+    implementation(project(":shared"))
     implementation(kotlin("stdlib"))
 }
